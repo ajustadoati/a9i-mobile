@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Buscar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (submit)="onSearch()">
+    <ion-item>
+      <ion-label position="floating">Buscar</ion-label>
+      <ion-input [(ngModel)]="order.product" name="product" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Categorías</ion-label>
+      <ion-select [(ngModel)]="order.category" name="category">
+        <ion-select-option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button type="submit" expand="block">Buscar</ion-button>
+  </form>
+</ion-content>

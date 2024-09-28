@@ -1,0 +1,7 @@
+{
+  "name": "a9i-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
