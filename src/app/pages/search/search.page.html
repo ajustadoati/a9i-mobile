@@ -3,9 +3,12 @@
     <ion-title>Buscar</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<div class="map" *ngIf="!isLoading">
+  <app-map [center]="center" [update]="update" (location)="fetchLocation($event)"></app-map>
+</div>
 <ion-content>
   <form (submit)="onSearch()">
+    
     <ion-item>
       <ion-label position="floating">Buscar</ion-label>
       <ion-input [(ngModel)]="order.product" name="product" required></ion-input>

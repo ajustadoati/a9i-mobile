@@ -15,6 +15,14 @@ export class SearchPage implements OnInit {
   product: any;
   selectedCategory: string | undefined;
   order: any = {}
+  isSubmitted = false;
+  location: any = {};
+  isLocationFetched: boolean | false | undefined;
+  center: any;
+  update: boolean = false;
+  id: any;
+  isLoading: boolean = false;
+  check: boolean = false;
   
   constructor(private categoryService: CategoryService, private providerService: ProviderService) { }
 
@@ -32,6 +40,21 @@ export class SearchPage implements OnInit {
       }
     );
   }
+
+  fetchLocation(event: any) {
+    this.location = event;
+    console.log('location: ', this.location);
+    this.isLocationFetched = true;
+  }
+  
+  toggleFetched() {
+    this.isLocationFetched = !this.isLocationFetched;
+  }
+
+  toggleSubmit() {
+    this.isSubmitted = !this.isSubmitted;
+  }
+
 
   onSearch() {
     console.log('Término de búsqueda:', this.order.category);
