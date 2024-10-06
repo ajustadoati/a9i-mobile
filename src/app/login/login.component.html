@@ -1,0 +1,19 @@
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email" formControlName="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" formControlName="password"></ion-input>
+  </ion-item>
+
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div> <!-- Mostrar mensaje de error -->
+
+  <ion-button expand="full" type="submit">Iniciar Sesión</ion-button>
+</form>
+
+
+<ion-button (click)="irAOtraPagina()">Ir a otra página</ion-button>
