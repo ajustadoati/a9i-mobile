@@ -20,3 +20,86 @@ ion-item {
         }
     }
 }
+
+.header-container {
+    text-align: right;
+    background-color: #fff;
+  }
+  
+  .logo-container {
+    text-align: center;
+    background-color: #fff;
+    margin: 30px 0;
+  }
+  
+  .search-container {
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 50px;
+  }
+  
+  .input-wrapper {
+    margin: 0 auto;
+    width: 270px;
+    background-image: url('/assets/img/input_search.png');
+    background-size: cover;
+    height: 50px;
+  }
+  
+  .select-wrapper {
+    margin: 15px auto;
+    width: 270px;
+    background-image: url('/assets/img/input_cat.png');
+    background-size: cover;
+    height: 50px;
+    display: block;
+  }
+  
+  .login-register-container {
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  .spacer {
+    height: 10px;
+  }
+
+  .button-wrapper {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .button-group {
+    margin-top: 70px;
+    text-align: center;
+  }
+
+  ion-content {
+    --background: #fff; /* Establece el fondo blanco en todo el contenido */
+  }
+  
+  ion-button {
+    --background-activated: none; /* Evita el color de fondo al hacer clic */
+    --background-focused: none; /* Evita el fondo azul cuando se enfoca */
+    --background-hover: none; /* Elimina el fondo azul cuando se pasa el mouse */
+    --box-shadow: none; /* Elimina cualquier sombra */
+  }
+  
+  .footer-line {
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/fondo.jpg'); /* Cambia a la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7; /* Nivel de transparencia de la imagen */
+    z-index: -1; /* Para que quede detrás del contenido */
+  }
+
