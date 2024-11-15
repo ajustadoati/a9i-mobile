@@ -1,0 +1,54 @@
+<ion-content>
+  
+  <div class="header-container">
+    <img src="assets/img/header_logo.png" width="150" height="150" />
+  </div>
+
+  <form (submit)="onSearch()">
+    <div class="logo-container">
+      <img src="assets/img/logo_ajustado.png" width="200" height="40" />
+    </div>
+
+    <div class="search-container">
+      <div class="input-wrapper">
+        <ion-item>
+          <ion-input [(ngModel)]="order.product" name="product" required></ion-input>
+             </ion-item>
+      </div>
+
+      <div class="select-wrapper">
+        <ion-item>
+          <ion-select [(ngModel)]="order.category" name="category">
+            <ion-select-option *ngFor="let category of categories" [value]="category.id">
+              {{ category.name }}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="button-wrapper">
+      <ion-button type="submit">
+        <img src="assets/img/button_buscar_es.png" width="150" height="60" alt="Buscar">
+      </ion-button>
+    </div>
+    
+    <div class="login-register-container">
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" routerLink="/login">
+            <img src="/assets/img/button_entrar_es.png" width="150" height="60" alt="Entrar">
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" routerLink="/userRegister">
+            <img src="/assets/img/button_cuenta_es.png" width="150" height="60" alt="Crear Cuenta">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </form>
+  <div class="footer-line">
+    <img src="/assets/img/line.png" width="150" height="10">
+  </div>
+</ion-content>

@@ -3,16 +3,20 @@
     <ion-title>Buscar</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <div class="map" *ngIf="!isLoading">
   <app-map [center]="center" [update]="update" (location)="fetchLocation($event)"></app-map>
 </div>
-<ion-content>
+
+<ion-content class="welcome-content">
+
+
   <form (submit)="onSearch()">
-    
     <ion-item>
       <ion-label position="floating">Buscar</ion-label>
       <ion-input [(ngModel)]="order.product" name="product" required></ion-input>
     </ion-item>
+
     <ion-item>
       <ion-label>Categorías</ion-label>
       <ion-select [(ngModel)]="order.category" name="category">
@@ -21,6 +25,21 @@
         </ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-button type="submit" expand="block">Buscar</ion-button>
+    
+    <ion-button type="submit" expand="block" color="primary">Buscar</ion-button>
   </form>
-</ion-content>
+
+  <!-- Sección de botones de autenticación estilo moderno -->
+  <div class="auth-buttons">
+    
+    <div class="social-buttons">
+      <ion-button color="medium" (click)="loginWithGoogle()">
+        <ion-icon name="logo-google" slot="icon-only"></ion-icon> Login
+      </ion-button>
+      <ion-button color="medium" (click)="loginWithEmail()">
+        <ion-icon name="mail" slot="icon-only"></ion-icon> Regsitro
+      </ion-button>
+    </div>
+  </div>
+
+ </ion-content>

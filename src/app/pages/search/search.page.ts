@@ -10,6 +10,18 @@ import { ProviderService } from 'src/app/services/provider/provider.service';
   styleUrls: ['./search.page.scss'],
 })
 export class SearchPage implements OnInit {
+loginWithEmail() {
+throw new Error('Method not implemented.');
+}
+loginWithGoogle() {
+throw new Error('Method not implemented.');
+}
+register() {
+throw new Error('Method not implemented.');
+}
+login() {
+throw new Error('Method not implemented.');
+}
 
   categories: Category[] = [];
   product: any;

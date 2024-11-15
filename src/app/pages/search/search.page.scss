@@ -103,3 +103,49 @@ ion-item {
     z-index: -1; /* Para que quede detrás del contenido */
   }
 
+  .welcome-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .welcome-text {
+    margin-bottom: 20px;
+  }
+  
+  .auth-buttons {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .or-divider {
+    text-align: center;
+    margin: 10px 0;
+    color: #888;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .social-buttons ion-button {
+    flex: 1;
+    margin: 0 5px;
+  }
+  
+  .privacy-text {
+    font-size: 12px;
+    color: #888;
+    margin-top: 20px;
+  }
+  
+  .privacy-text a {
+    color: #3880ff;
+    text-decoration: underline;
+  }
+  
+
